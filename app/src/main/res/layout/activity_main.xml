@@ -9,19 +9,51 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:padding="8dp"
-        android:layout_marginBottom="70dp"
-        tools:listitem="@layout/item">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/novoTextView"
+        android:layout_marginBottom="16dp"
+        tools:listitem="@layout/musica">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/novoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dados da nova música:"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/musicaEditText"
+        android:layout_marginLeft="90dp"/>
+
+    <EditText
+        android:id="@+id/musicaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:hint="Musica"
+        app:layout_constraintBottom_toTopOf="@id/artistaEditText"/>
+
+    <EditText
+        android:id="@+id/artistaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:hint="Artista"
+        app:layout_constraintBottom_toTopOf="@id/insertButton"/>
 
     <Button
         android:id="@+id/insertButton"
         android:layout_margin="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Insert"
+        android:text="@string/insert"
         android:onClick="insertButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,5 +67,16 @@
         android:onClick="removeItem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_margin="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:onClick="editItem"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/insertButton"
+        app:layout_constraintEnd_toEndOf="@id/removeButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

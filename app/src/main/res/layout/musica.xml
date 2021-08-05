@@ -10,10 +10,10 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
             android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_baseline_adb_24">
+            android:src="@drawable/ic_baseline_queue_music_24">
         </ImageView>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -23,19 +23,20 @@
             android:padding="4dp">
 
             <TextView
-                android:id="@+id/titleTextView"
+                android:id="@+id/musicaTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="10dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:text="Title"/>
+                android:text="Musica"/>
 
             <TextView
-                android:id="@+id/infoTextView"
+                android:id="@+id/artistaTextView"
+                android:textSize="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Info"/>
+                android:text="Artista"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
